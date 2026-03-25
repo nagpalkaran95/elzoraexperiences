@@ -192,9 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
 Looking forward to hearing from you!`;
 
     const encoded = encodeURIComponent(whatsappMessage);
-    // Opens WhatsApp with pre-filled message (no phone number — user picks contact)
-    // Replace with your business number: wa.me/91XXXXXXXXXX
-    window.open(`https://wa.me/?text=${encoded}`, '_blank');
+    // Opens WhatsApp with pre-filled message to business number
+    window.open(`https://wa.me/919582390886?text=${encoded}`, '_blank');
 
     // Track in GA
     if (typeof gtag !== 'undefined') {
