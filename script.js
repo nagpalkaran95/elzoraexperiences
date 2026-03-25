@@ -1,5 +1,5 @@
 /* ================================================================
-   THE RIYASAT EVENTS — Script
+   ELZORA EXPERIENCES — Script
    Form handling, animations, particles, navigation
    ================================================================ */
 
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showStatus('❌ Something went wrong. Please try WhatsApp or email us directly.', 'error');
       }
     } catch (err) {
-      showStatus('❌ Network error. Please try WhatsApp or email us directly at theriyasatevents@gmail.com', 'error');
+      showStatus('❌ Network error. Please try WhatsApp or email us directly at elzoraexperiences@gmail.com', 'error');
     }
 
     submitBtn.disabled = false;
