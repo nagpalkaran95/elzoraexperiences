@@ -23,7 +23,7 @@
 
   <!-- Favicon (crown emoji fallback) -->
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>" />
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css" />
@@ -43,7 +43,7 @@
   <!-- ======== LOADER ======== -->
   <div class="loader" id="loader">
     <div class="loader-content">
-      <div class="loader-crown">👑</div>
+      <div class="loader-crown">✦</div>
       <div class="loader-text">ELZORA EXPERIENCES</div>
     </div>
   </div>
@@ -52,8 +52,8 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="#" class="nav-logo">
-        <span class="crown">👑</span>
-        <span>Elzora <span class="gold-text">Experiences</span></span>
+        <span class="crown">✦</span>
+        <span>Elzora <span class="bronze-text">Experiences</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
@@ -74,9 +74,9 @@
     <div class="hero-bg"></div>
     <canvas id="particles-canvas"></canvas>
     <div class="hero-content">
-      <div class="hero-crown">👑</div>
+      <div class="hero-crown">✦</div>
       <h1 class="hero-title">
-        <span class="gold-text">Elzora</span> Experiences
+        <span class="bronze-text">Elzora</span> Experiences
       </h1>
       <p class="hero-tagline">Crafting Unforgettable Experiences</p>
       <div class="hero-buttons">
@@ -90,7 +90,7 @@
   <section class="about section-padding" id="about">
     <div class="container">
       <div class="section-title reveal">
-        <h2 class="gold-text">Who We Are</h2>
+        <h2 class="bronze-text">Who We Are</h2>
       </div>
       <div class="ornament reveal">
         <span class="ornament-icon">✦</span>
@@ -135,7 +135,7 @@
   <section class="services section-padding" id="services">
     <div class="container">
       <div class="section-title reveal">
-        <h2 class="gold-text">Our Services</h2>
+        <h2 class="bronze-text">Our Services</h2>
       </div>
       <div class="ornament reveal">
         <span class="ornament-icon">✦</span>
@@ -184,32 +184,19 @@
 
       <!-- Individual Services -->
       <div class="individual-services reveal">
-        <h3 class="gold-text">Individual Services</h3>
+        <h3 class="bronze-text">Individual Services</h3>
         <p class="individual-services-subtitle">Need just one piece of the puzzle? We've got you covered.</p>
-        <div class="individual-grid reveal-children">
-          <div class="individual-item">
-            <span class="icon">🎨</span>
-            <h4>Décor & Design</h4>
+        <div class="interactive-services reveal-children">
+          <div class="services-list">
+            <div class="service-item active" data-img="images/wedding.png">Décor & Design</div>
+            <div class="service-item" data-img="images/social.png">Catering</div>
+            <div class="service-item" data-img="images/hero.png">Photography</div>
+            <div class="service-item" data-img="images/corporate.png">Entertainment</div>
+            <div class="service-item" data-img="images/luxury.png">Venue</div>
+            <div class="service-item" data-img="images/wedding.png">Floral Design</div>
           </div>
-          <div class="individual-item">
-            <span class="icon">🍽️</span>
-            <h4>Catering</h4>
-          </div>
-          <div class="individual-item">
-            <span class="icon">📸</span>
-            <h4>Photography</h4>
-          </div>
-          <div class="individual-item">
-            <span class="icon">🎵</span>
-            <h4>Entertainment</h4>
-          </div>
-          <div class="individual-item">
-            <span class="icon">🏛️</span>
-            <h4>Venue</h4>
-          </div>
-          <div class="individual-item">
-            <span class="icon">💐</span>
-            <h4>Floral Design</h4>
+          <div class="services-preview">
+            <img src="images/wedding.png" id="servicePreviewImg" alt="Service Preview" loading="lazy" />
           </div>
         </div>
       </div>
@@ -220,29 +207,36 @@
   <section class="gallery section-padding" id="gallery">
     <div class="container">
       <div class="section-title reveal">
-        <h2 class="gold-text">Our Work</h2>
+        <h2 class="bronze-text">Our Work</h2>
       </div>
       <div class="ornament reveal">
         <span class="ornament-icon">✦</span>
       </div>
       <p class="section-subtitle reveal">A glimpse into the experiences we've crafted.</p>
 
-      <div class="gallery-grid reveal">
-        <div class="gallery-item">
-          <img src="images/hero.png" alt="Luxury ballroom event" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/wedding.png" alt="Wedding ceremony" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/corporate.png" alt="Corporate event" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/social.png" alt="Social celebration" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/luxury.png" alt="Luxury private dinner" loading="lazy" />
-        </div>
+    </div>
+    <div class="gallery-slider reveal">
+      <div class="gallery-track">
+        <!-- Original Set -->
+        <div class="gallery-slide"><img src="images/hero.png" alt="Luxury ballroom event" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/wedding.png" alt="Wedding ceremony" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/floral.png" alt="Floral decor" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/corporate.png" alt="Corporate event" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/gala.png" alt="Corporate gala" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/social.png" alt="Social celebration" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/table.png" alt="Luxury table setting" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/luxury.png" alt="Luxury private dinner" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/entertainment.png" alt="Live entertainment" loading="lazy"></div>
+        <!-- Duplicated Set for infinite sliding -->
+        <div class="gallery-slide"><img src="images/hero.png" alt="Luxury ballroom event" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/wedding.png" alt="Wedding ceremony" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/floral.png" alt="Floral decor" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/corporate.png" alt="Corporate event" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/gala.png" alt="Corporate gala" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/social.png" alt="Social celebration" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/table.png" alt="Luxury table setting" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/luxury.png" alt="Luxury private dinner" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/entertainment.png" alt="Live entertainment" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -251,7 +245,7 @@
   <section class="enquiry section-padding" id="enquiry">
     <div class="container">
       <div class="section-title reveal">
-        <h2 class="gold-text">Get In Touch</h2>
+        <h2 class="bronze-text">Get In Touch</h2>
       </div>
       <div class="ornament reveal">
         <span class="ornament-icon">✦</span>
@@ -261,20 +255,26 @@
       <div class="enquiry-wrapper">
         <!-- Info Side -->
         <div class="enquiry-info reveal">
-          <h3 class="gold-text">Let's Plan Your Event</h3>
+          <h3 class="bronze-text">Let's Plan Your Event</h3>
           <p>Share your vision with us and our team will get back to you within 24 hours with a customised proposal
             tailored to your needs.</p>
           <ul class="contact-list">
             <li>
-              <span class="icon">📧</span>
+              <span class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
               <span>elzoraexperiences@gmail.com</span>
             </li>
             <li>
-              <span class="icon">🌐</span>
+              <span class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </span>
               <span>www.elzoraexperiences.com</span>
             </li>
             <li>
-              <span class="icon">📍</span>
+              <span class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
               <span>Available Across India</span>
             </li>
           </ul>
@@ -371,10 +371,10 @@
 
           <div class="form-actions">
             <button type="submit" class="btn btn-primary" id="submitBtn">
-              ✉️ Send Enquiry
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Send Enquiry
             </button>
             <button type="button" class="btn btn-whatsapp" id="whatsappBtn">
-              💬 WhatsApp Us
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> WhatsApp Us
             </button>
           </div>
 
@@ -390,19 +390,27 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="nav-logo">
-            <span class="crown">👑</span>
-            <span>Elzora <span class="gold-text">Experiences</span></span>
+            <span class="crown">✦</span>
+            <span>Elzora <span class="bronze-text">Experiences</span></span>
           </a>
           <p>Crafting unforgettable experiences — from grand weddings to intimate celebrations. Your vision, our
             expertise.</p>
           <div class="social-links">
             <a href="https://www.instagram.com/elzoraexperiences" target="_blank" rel="noopener" class="social-link"
-              aria-label="Instagram">📷</a>
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
             <a href="https://www.facebook.com/elzoraexperiences" target="_blank" rel="noopener" class="social-link"
-              aria-label="Facebook">📘</a>
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
             <a href="https://wa.me/919582390886" target="_blank" rel="noopener" class="social-link"
-              aria-label="WhatsApp">💬</a>
-            <a href="mailto:elzoraexperiences@gmail.com" class="social-link" aria-label="Email">📧</a>
+              aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+            <a href="mailto:elzoraexperiences@gmail.com" class="social-link" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
           </div>
         </div>
         <div class="footer-col">
@@ -425,7 +433,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Elzora Experiences. All rights reserved.</p>
+        <p>&copy; 2026 Elzora Experiences. All rights reserved.</p>
         <p>Designed with ❤️ for unforgettable moments</p>
       </div>
     </div>

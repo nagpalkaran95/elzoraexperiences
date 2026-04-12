@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show loading state
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '⏳ Sending...';
+    submitBtn.innerHTML = '<svg class="spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg> Sending...';
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     submitBtn.disabled = false;
-    submitBtn.innerHTML = '✉️ Send Enquiry';
+    submitBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Send Enquiry';
   });
 
   function showStatus(message, type) {
@@ -253,7 +253,7 @@ Looking forward to hearing from you!`;
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(232, 212, 139, ${this.opacity})`;
+        ctx.fillStyle = `rgba(146, 112, 59, ${this.opacity})`;
         ctx.fill();
       }
     }
@@ -293,6 +293,31 @@ Looking forward to hearing from you!`;
   if (dateInput) {
     const today = new Date().toISOString().split('T')[0];
     dateInput.setAttribute('min', today);
+  }
+
+  // ---- Interactive Services Hover ----
+  const serviceItems = document.querySelectorAll('.service-item');
+  const previewImg = document.getElementById('servicePreviewImg');
+
+  if (serviceItems.length > 0 && previewImg) {
+    serviceItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        // Remove active class from all
+        serviceItems.forEach(el => el.classList.remove('active'));
+        // Add active to current
+        item.classList.add('active');
+        
+        // Change image with crossfade
+        const newSrc = item.getAttribute('data-img');
+        if (!previewImg.src.includes(newSrc)) {
+          previewImg.classList.add('fade-out');
+          setTimeout(() => {
+            previewImg.src = newSrc;
+            previewImg.classList.remove('fade-out');
+          }, 400); // Wait for CSS transition (0.4s = var(--transition-medium))
+        }
+      });
+    });
   }
 
 });
